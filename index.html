@@ -6,6 +6,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/T1css.css">
     <title>youssef khaled</title>
+    <style>
+        .regstration{
+    width: 600px ;
+    background-color: #00073D ;
+    margin: 20px auto 0px;
+    padding: 30px ;
+}
+.container{
+    border-radius: 10px;
+    display: flex;
+    background: #000856;
+    margin-bottom: 20px ;
+}
+.left{
+    padding: 20px ;
+}
+.logo{
+    display: flex;
+}
+.logo img{
+    width: 95px; 
+}
+.logo .text{
+    align-items: center;
+}
+.logo h3{
+    font-size: 22px ;
+}
+.logo p{
+    margin-top: -15px ;
+    font-size: 12px;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+#first , #last{
+    width: 47%;
+}
+#email{
+    width: 100%;
+}
+#pass , #Cpass{
+    width: 47%;
+    position: relative;
+}
+
+.confirm{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #b93535;
+    color: black;
+    padding: 5px;
+    display: none;
+}
+[type="submit"],[type= "reset"]{
+    width: 100%;
+    background: #01A3F1;
+    color: black;
+    font-weight: 700;
+    box-shadow: 0px 0px 5px 0px #01a3f1;
+    cursor: pointer;
+}
+.genderD {
+    display: flex;
+    padding-left: 7px;
+    align-items: center;
+}
+[type="radio"]{
+    margin-left: 45%;
+}
+
+input{
+    box-sizing: border-box;
+    padding: 13px;
+    margin: 5px;
+    background: #022160;
+    border: 0;
+}
+input:focus{
+    border: 0px ;
+}
+.right img{
+    height: 100%;
+    width: 220px;
+    object-fit: cover;
+}
+
+.table{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    border-radius: 10px ;
+}
+.name , .email,
+.password , .gender{
+    height: 45px;
+    background: #01A3F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 7px 0px #01a3f1;
+}
+.n , .e , .p , .g{
+    height: 45px ;
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-all;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px rgba(25, 95, 194, 1);
+}
+
+    </style>
 </head>
 <body>
     <div class="regstration">
@@ -48,6 +166,44 @@
         </div>
     </div>
     
-    <script src="./T1js.js"></script>
+    <script>
+        let x = 0 ;
+document.forms[0].onsubmit = function() {
+    
+    let name = document.getElementById(`first`).value ;
+    name += " "+  document.getElementById(`last`).value ;
+    let email = document.getElementById(`email`).value ;
+    let pass = document.getElementById(`pass`).value ;
+    let Cpass = document.getElementById(`Cpass`).value ;
+    let gender = document.querySelector(`#male`).checked ;
+    if(gender == true){
+        gender = "Male" ;
+    }else gender = "female" ;
+
+    let table = document.querySelector(`.table`) ;
+    let n = document.createElement(`div`) ;
+    n.textContent = name ;
+    let e = document.createElement(`div`) ;
+    e.textContent = email ;
+    let p = document.createElement(`div`) ;
+    p.textContent = pass;
+    let g = document.createElement(`div`); 
+    g.textContent = gender ;
+    
+    n.className = "n" ;
+    e.className = "e" ;
+    p.className = "p" ;
+    g.className = "g" ;
+    table.appendChild(n) ;
+    table.appendChild(e) ;
+    table.appendChild(p) ;
+    table.appendChild(g) ;
+    
+    x++ ;
+    return false ;
+}
+
+
+    </script>
 </body>
 </html>
