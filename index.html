@@ -6,38 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="T1css.css">
     <title>youssef khaled</title>
-    
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Inter:wght@200;400;500;600;700&family=Open+Sans:wght@300;400;600;700;800&family=Qwitcher+Grypen&family=Work+Sans:wght@200;300;400;600;800&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="regstration">
         <div class="container">
             <div class="left">
                 <div class="logo">
-                    <img class="img" src="images/3a3535c97d93720e2b7cc95ea9469290.png" alt="">
+                    <img class="img" src="/images/3a3535c97d93720e2b7cc95ea9469290.png" alt="">
                     <div class="text">
                         <h3>Regestration Form</h3>
                         <p>Welcome to MSP Tech Club ASU</p>
                     </div>
                 </div>
                 <form action="">
-                    <input type="text" id = "first" placeholder="First name" >
+                    <input type="text" id = "first" placeholder="First name" required>
                     <input type="text" id = "last"  placeholder="Second name" >
                     <input type="email" id="email" placeholder="Email" >
-                    <input type="password" id = "pass" placeholder="Password" >
+                    <input type="password" id = "pass" placeholder="Password" required >
                     <input type="password" id = "Cpass" placeholder="Confirm Password" >
                     <div class="confirm">Password doesn't match</div>
 
                     <div class="genderD">
-                        <span>Gender</span>
-                        <input type="radio" name="gender" id="male" ><label for="male">Male</label>
-                        <input type="radio" name="gender" id="female"  ><label for="female">Female</label>
+                        <span style="font-size: 19px;">Gender:</span>
+                        <div>
+                            <input type="radio" name="gender" id="male" ><label for="male">Male</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" id="female"  ><label for="female">Female</label>
+                        </div>
                     </div>
                     <input type="submit" value="Regester">
                     <input type="reset" value="Reset">
                 </form>
             </div>
             <div class="right">
-                <img src="images/WhatsApp Image 2022-12-09 at 6.43.10 AM.jpeg" alt="">
+                <img src="/images/WhatsApp Image 2022-12-09 at 6.43.10 AM.jpeg" alt="">
             </div>
         </div>
 
@@ -48,6 +56,7 @@
             <div class="gender">gender</div>
         </div>
     </div>
+    
     <script src="T1js.js"></script>
 </body>
 </html>
