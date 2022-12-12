@@ -11,6 +11,15 @@ document.forms[0].onsubmit = function() {
         gender = "Male" ;
     }else gender = "female" ;
 
+    if(pass != Cpass){
+        document.querySelector(`.confirm`).style=`
+        display: inline-block;
+        ` ;
+        return false ;
+    }
+    document.querySelector(`.confirm`).style=`
+        display: none;
+        ` ;
     let table = document.querySelector(`.table`) ;
     let n = document.createElement(`div`) ;
     n.textContent = name ;
@@ -25,12 +34,11 @@ document.forms[0].onsubmit = function() {
     e.className = "e" ;
     p.className = "p" ;
     g.className = "g" ;
-
-    if(x % 2 == 0 ){
-        n.classList.add(`darker`); 
-        e.classList.add(`darker`) ;
-        p.classList.add(`darker`) ;
-        g.classList.add(`darker`) ;
+    if(x%2 == 1){
+        n.classList.add("darker") ;
+        e.classList.add("darker") ;
+        p.classList.add("darker") ;
+        g.classList.add("darker") ;
     }
     table.appendChild(n) ;
     table.appendChild(e) ;
